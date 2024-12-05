@@ -1,0 +1,30 @@
+.textWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.dataWrap {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    margin-right: 5px;
+    color: #3107ed;
+}
+
+
+.deleteContactBtn {
+    min-width: 80px;
+    padding: 5px 0;
+    background-color: #5cd1eb;
+    border: none;
+    border-radius: 4px;
+}
+
+.contactItem:has(.deleteContactBtn:hover,
+    .deleteContactBtn:focus-visible,
+    .deleteContactBtn:active) {
+    border: 1px solid red;
+}
