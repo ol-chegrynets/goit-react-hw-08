@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { useId } from 'react';
 import css from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contactsSlice';
+import { addContact } from '../../redux/contactsOps';
 
 const ContactForm = () => {
   const initialValues = { id: '', name: '', number: '' };
@@ -18,7 +18,10 @@ const ContactForm = () => {
       .min(3, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required!'),
-    number: Yup.number().min(7, 'Too Short!').required('Required!'),
+    number: Yup.number()
+      .min(7, 'Too Short!')
+      .required('Required!')
+      .typeError('Enter phone-number!'),
   });
 
   const handleFormSubmit = (values, actions) => {
