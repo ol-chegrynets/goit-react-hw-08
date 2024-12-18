@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import Contact from '../Contact/Contact';
 import s from './ContactList.module.css';
-import { selectFilteredContacts } from '../../redux/contactsSlice';
+import { selectFilteredContacts } from '../../redux/contacts/selectors';
 import toast, { Toaster } from 'react-hot-toast';
 
 const ContactList = () => {

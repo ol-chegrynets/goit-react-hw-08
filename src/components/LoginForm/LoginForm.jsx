@@ -31,8 +31,8 @@ const LoginForm = () => {
       onSubmit={handleFormSubmit}
       validationSchema={loginFormValidationSchema}
     >
-      <Form className={css.form}>
-        <label className={css.label}>
+      <Form className={s.form}>
+        <label className={s.label}>
           <span>Email</span>
           <Field
             type="text"

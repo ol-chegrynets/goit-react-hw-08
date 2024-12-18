@@ -1,7 +1,7 @@
 .section {
   border: 1px solid rgb(176, 176, 176);
   padding: 15px 30px;
-  max-width: 650px;
+  /* max-width: 650px; */
   min-height: calc(-70px + 100vh);
   margin: 0px auto;
   box-shadow: rgba(120, 120, 120, 0.75) 0px 0px 10px 2px;

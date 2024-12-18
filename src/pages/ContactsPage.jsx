@@ -1,12 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import ContactForm from "../components/ContactForm/ContactForm";
-import ContactList from "../components/ContactList/ContactList";
-import SearchBox from "../components/SearchBox/SearchBox";
+import { useDispatch, useSelector } from 'react-redux';
+import ContactForm from '../components/ContactForm/ContactForm';
+import ContactList from '../components/ContactList/ContactList';
+import SearchBox from '../components/SearchBox/SearchBox';
 
-import { fetchContacts } from "../redux/contacts/operations";
-import { useEffect } from "react";
-import { selectContacts } from "../redux/contacts/selectors";
-import toast, { Toaster } from "react-hot-toast";
+import { fetchContacts } from '../redux/contacts/operations';
+import { useEffect } from 'react';
+import { selectContacts } from '../redux/contacts/selectors';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ContactsPage = () => {
   const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const ContactsPage = () => {
     dispatch(fetchContacts())
       .unwrap()
       .then(() => {
-        toast.success("Phonebook loaded successfully!");
+        toast.success('Phonebook loaded successfully!');
       });
   }, [dispatch]);
   return (
