@@ -1,30 +1,27 @@
-import css from './Contact.module.css';
+import s from './Contact.module.css';
 import { ImPhone, ImUser } from 'react-icons/im';
-import { useDispatch } from 'react-redux';
-import { deleteContact } from '../../redux/contactsOps';
 
-const Contact = ({ contact: { id, name, number } }) => {
-  const dispatch = useDispatch();
+const Contact = ({ name, phone, deleteContacts, id }) => {
   return (
-    <>
-      <div className={css.textWrap}>
-        <div className={css.dataWrap}>
-          <ImUser className={css.icon} size="24" />
-          <p className={css.contactName}>{name}</p>
+    <li className={s.contactItem}>
+      <div className={s.textWrap}>
+        <div className={s.dataWrap}>
+          <ImUser className={s.icon} size="24" />
+          <p className={s.contactName}>{name}</p>
         </div>
-        <div className={css.dataWrap}>
+        <div className={s.dataWrap}>
           <ImPhone className={css.icon} size="20" />
-          <p className={css.contactPhone}>{number}</p>
+          <p className={s.contactPhone}>{phone}</p>
         </div>
       </div>
       <button
         type="button"
-        className={css.deleteContactBtn}
-        onClick={() => dispatch(deleteContact(id))}
+        className={s.deleteContactBtn}
+        onClick={() => deleteContacts(id)}
       >
         Delete
       </button>
-    </>
+    </li>
   );
 };
 
