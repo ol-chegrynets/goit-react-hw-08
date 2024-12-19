@@ -38,6 +38,10 @@ function App() {
         <Route
           path="/contacts"
           element={<PrivateRoute component={<ContactsPage />} />}
+        />{' '}
+        <Route
+          path="*"
+          element={<RestrictedRoute component={<RegistrationPage />} />}
         />
       </Routes>
     </Layout>
