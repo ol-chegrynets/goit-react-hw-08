@@ -4,7 +4,7 @@ const HomePage = () => {
     <section className={s.section}>
       <div className={s.sectionWrapper}>
         <h1 className={s.title}>Welcome to Phonebook!</h1>
-        <p className={s.text}>Create your own personal book of contacts</p>
+        <p className={s.text}>Your personal book with contacts</p>
       </div>
     </section>
   );

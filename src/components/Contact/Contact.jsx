@@ -10,7 +10,7 @@ const Contact = ({ name, phone, deleteContacts, id }) => {
           <p className={s.contactName}>{name}</p>
         </div>
         <div className={s.dataWrap}>
-          <ImPhone className={css.icon} size="20" />
+          <ImPhone className={s.icon} size="20" />
           <p className={s.contactPhone}>{phone}</p>
         </div>
       </div>

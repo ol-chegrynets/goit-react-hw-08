@@ -3,7 +3,8 @@ import * as Yup from 'yup';
 import { useId } from 'react';
 import s from './ContactForm.module.css';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contacts/operations';
+import { addContact } from '../../redux/contacts/operations';
+import { toast } from 'react-hot-toast';
 
 const ContactForm = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const ContactForm = () => {
   });
 
   const handleFormSubmit = (values, actions) => {
-    dispatch(onAddContact(values));
+    onAddContact(values);
     actions.resetForm();
   };
 
