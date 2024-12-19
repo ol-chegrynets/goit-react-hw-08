@@ -26,44 +26,51 @@ const LoginForm = () => {
   };
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={handleFormSubmit}
-      validationSchema={loginFormValidationSchema}
-    >
-      <Form className={s.form}>
-        <label className={s.label}>
-          <span>Email</span>
-          <Field
-            type="text"
-            name="email"
-            placeholder="test.example@gmail.com"
-          />
-          <ErrorMessage className={s.errorText} name="email" component="span" />
-        </label>
+    <>
+      <h2 className={s.title}>complete the registration</h2>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleFormSubmit}
+        validationSchema={loginFormValidationSchema}
+      >
+        <Form className={s.form}>
+          <label className={s.label}>
+            <span>Email</span>
+            <Field
+              type="text"
+              name="email"
+              placeholder="test.example@gmail.com"
+            />
+            <ErrorMessage
+              className={s.errorText}
+              name="email"
+              component="span"
+            />
+          </label>
 
-        <label className={s.label}>
-          <span>Password</span>
-          <Field
-            type="password"
-            name="password"
-            placeholder="Enter your password"
-          />
-          <ErrorMessage
-            className={s.errorText}
-            name="password"
-            component="span"
-          />
-        </label>
+          <label className={s.label}>
+            <span>Password</span>
+            <Field
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+            <ErrorMessage
+              className={s.errorText}
+              name="password"
+              component="span"
+            />
+          </label>
 
-        <button className={s.submitBtn} type="submit">
-          Log In
-        </button>
-        {error && (
-          <p className={s.errorText}>Oops, some error occurred... {error}</p>
-        )}
-      </Form>
-    </Formik>
+          <button className={s.submitBtn} type="submit">
+            Log In
+          </button>
+          {error && (
+            <p className={s.errorText}>Oops, some error occurred... {error}</p>
+          )}
+        </Form>
+      </Formik>
+    </>
   );
 };
 

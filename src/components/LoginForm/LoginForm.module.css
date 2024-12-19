@@ -1,3 +1,9 @@
+.title {
+  font-size: 30px;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 50px auto;
+}
 .form {
   border: 1px solid rgb(176, 176, 176);
   padding: 15px 30px;
